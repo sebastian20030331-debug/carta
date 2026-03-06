@@ -1,126 +1,113 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Feliz Día de la Mujer Jessica</title>
+<title>Carta para Jessica 💌</title>
 
 <style>
 
 body{
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
-    overflow-x:hidden;
-    text-align:center;
+margin:0;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#ffd1dc;
+font-family:'Segoe UI',sans-serif;
+overflow:hidden;
 }
 
-/* HEADER */
+/* CARTA */
 
-header{
-    padding:60px 20px;
-    color:white;
-    background:#8e44ad;
+.envelope{
+position:relative;
+width:300px;
+height:200px;
+background:#ff8fab;
+border-radius:10px;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
-header h1{
-    font-size:50px;
-    margin:0;
+.flap{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#ff6f91;
+clip-path:polygon(0 0,100% 0,50% 60%);
+transform-origin:top;
+transition:transform 1s;
 }
 
-header h2{
-    font-size:30px;
+.text{
+position:absolute;
+top:80px;
+width:100%;
+text-align:center;
+color:white;
+font-size:18px;
+font-weight:bold;
 }
 
-/* TARJETAS */
-
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:20px;
-}
-
-.card{
-    background:white;
-    margin:25px;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 15px 30px rgba(0,0,0,0.15);
-    animation: aparecer 2s ease;
-}
-
-.card img{
-    width:100%;
-    border-radius:15px;
-    margin-top:15px;
+.open .flap{
+transform:rotateX(180deg);
 }
 
 /* MENSAJE */
 
-.mensaje{
-    font-size:20px;
-    line-height:1.6;
+.dialog{
+position:absolute;
+background:white;
+padding:60px;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.3);
+text-align:center;
+max-width:600px;
+font-size:32px;
+color:#8e44ad;
+display:none;
+animation:aparecer 1s ease;
+z-index:10;
 }
 
-/* FOOTER */
-
-footer{
-    background:#8e44ad;
-    color:white;
-    padding:25px;
-    margin-top:40px;
+.kiss{
+font-size:80px;
+margin-top:20px;
 }
-
-/* ANIMACIONES */
 
 @keyframes aparecer{
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+from{
+opacity:0;
+transform:scale(0.5);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
 }
 
-/* CORAZONES */
+/* CONFETI */
 
-.corazon{
-    position:fixed;
-    bottom:-50px;
-    font-size:25px;
-    animation: flotar 10s linear infinite;
+.confeti{
+position:fixed;
+top:-50px;
+font-size:60px;
+animation:caer linear infinite;
+z-index:1000;
 }
 
-@keyframes flotar{
-    from{
-        transform:translateY(0);
-        opacity:1;
-    }
-    to{
-        transform:translateY(-120vh);
-        opacity:0;
-    }
+@keyframes caer{
+0%{
+transform:translateY(-50px) rotate(0deg);
+opacity:1;
 }
-
-/* FLORES GIRANDO */
-
-.flor{
-    position:fixed;
-    font-size:35px;
-    animation: girar 20s linear infinite;
-    opacity:0.6;
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0;
 }
-
-@keyframes girar{
-    from{
-        transform:rotate(0deg);
-    }
-    to{
-        transform:rotate(360deg);
-    }
 }
 
 </style>
@@ -128,75 +115,72 @@ footer{
 
 <body>
 
-<header>
-<h1>🌸 Feliz Día de la Mujer 🌸</h1>
-<h2>Jessica 💜</h2>
-</header>
+<div class="envelope" onclick="abrirCarta()" id="carta">
 
-<div class="container">
+<div class="flap"></div>
 
-<div class="card">
-<h2>🌷 Para una mujer increíble</h2>
-
-<p class="mensaje">
-Jessica, hoy celebramos tu fuerza, tu belleza y todo lo maravilloso que eres.
-El mundo es mejor gracias a mujeres como tú.
-Nunca olvides lo especial que eres. 💜
-</p>
-
-<img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946">
-</div>
-
-<div class="card">
-
-<h2>💐 Un mensaje para ti</h2>
-
-<p class="mensaje">
-Que cada día recuerdes lo valiosa que eres.
-Que tus sueños se cumplan y que tu sonrisa siga iluminando a todos.
-Hoy celebramos a una mujer única: Jessica.
-</p>
-
-<img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92">
-
-</div>
-
-<div class="card">
-
-<h2>✨ Jessica</h2>
-
-<p class="mensaje">
-Eres fuerte, valiente y especial.  
-Que este Día de la Mujer te recuerde lo increíble que eres  
-y lo lejos que puedes llegar.  
-
-💜 Nunca dejes de brillar 💜
-</p>
-
-<img src="https://images.unsplash.com/photo-1526045478516-99145907023c">
-
+<div class="text">
+Abre tu carta mi amor 💌
 </div>
 
 </div>
 
-<footer>
-🌸 Con cariño para Jessica 🌸
-</footer>
+<div class="dialog" id="mensaje">
 
-<!-- CORAZONES -->
-<div class="corazon" style="left:10%">💜</div>
-<div class="corazon" style="left:25%; animation-delay:2s;">💗</div>
-<div class="corazon" style="left:40%; animation-delay:4s;">💖</div>
-<div class="corazon" style="left:55%; animation-delay:1s;">💜</div>
-<div class="corazon" style="left:70%; animation-delay:3s;">💗</div>
-<div class="corazon" style="left:85%; animation-delay:5s;">💖</div>
+<div>
+Eres mi motivo de vida. Desde que llegaste hiciste mi mundo más feliz. Nunca olvides lo valiosa que eres ni lo mucho que significas para mí.
 
-<!-- FLORES -->
-<div class="flor" style="top:10%; left:5%">🌸</div>
-<div class="flor" style="top:30%; left:90%">🌼</div>
-<div class="flor" style="top:70%; left:10%">🌺</div>
-<div class="flor" style="top:80%; left:80%">🌷</div>
+Te quiero muchísimo, mi amor. Gracias por existir y por hacer mi vida tan especial. Siempre serás el amor de mi vida. 💖✨
+<br><br>
+Te mando muchos besitos y abrazos mi amor 
+</div>
+
+<div class="kiss">💋</div>
+
+</div>
+
+<div id="confeti-container"></div>
+
+<script>
+
+function abrirCarta(){
+
+let carta = document.getElementById("carta");
+let mensaje = document.getElementById("mensaje");
+
+carta.classList.add("open");
+
+setTimeout(()=>{
+carta.style.display="none";
+mensaje.style.display="block";
+crearConfeti();
+},900);
+
+}
+
+function crearConfeti(){
+
+let container = document.getElementById("confeti-container");
+
+let emojis = ["🎉","💜","💖","🎊","💗"];
+
+for(let i=0;i<25;i++){
+
+let confeti = document.createElement("div");
+confeti.className="confeti";
+
+confeti.innerHTML = emojis[Math.floor(Math.random()*emojis.length)];
+
+confeti.style.left = Math.random()*100+"%";
+confeti.style.animationDuration = (4 + Math.random()*4)+"s";
+
+container.appendChild(confeti);
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
-```
