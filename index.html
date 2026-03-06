@@ -1,64 +1,126 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Jessica 💜</title>
+<title>Feliz Día de la Mujer Jessica</title>
 
 <style>
 
 body{
     margin:0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    overflow-x:hidden;
     text-align:center;
-    color:#333;
 }
+
+/* HEADER */
 
 header{
-    padding:40px;
-    background:#8e44ad;
+    padding:60px 20px;
     color:white;
+    background:#8e44ad;
 }
 
-h1{
-    font-size:45px;
+header h1{
+    font-size:50px;
+    margin:0;
 }
 
-h2{
-    color:#8e44ad;
+header h2{
+    font-size:30px;
 }
+
+/* TARJETAS */
 
 .container{
-    max-width:900px;
+    max-width:1000px;
     margin:auto;
-    padding:30px;
+    padding:20px;
 }
 
 .card{
     background:white;
-    padding:25px;
-    margin:20px;
-    border-radius:15px;
-    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    margin:25px;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+    animation: aparecer 2s ease;
 }
 
-img{
+.card img{
     width:100%;
     border-radius:15px;
     margin-top:15px;
 }
+
+/* MENSAJE */
 
 .mensaje{
     font-size:20px;
     line-height:1.6;
 }
 
+/* FOOTER */
+
 footer{
-    margin-top:40px;
-    padding:20px;
     background:#8e44ad;
     color:white;
+    padding:25px;
+    margin-top:40px;
+}
+
+/* ANIMACIONES */
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* CORAZONES */
+
+.corazon{
+    position:fixed;
+    bottom:-50px;
+    font-size:25px;
+    animation: flotar 10s linear infinite;
+}
+
+@keyframes flotar{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+/* FLORES GIRANDO */
+
+.flor{
+    position:fixed;
+    font-size:35px;
+    animation: girar 20s linear infinite;
+    opacity:0.6;
+}
+
+@keyframes girar{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
 }
 
 </style>
@@ -68,33 +130,18 @@ footer{
 
 <header>
 <h1>🌸 Feliz Día de la Mujer 🌸</h1>
-<h2>Jessica</h2>
+<h2>Jessica 💜</h2>
 </header>
 
 <div class="container">
 
 <div class="card">
-<h2>💜 Para una mujer increíble</h2>
+<h2>🌷 Para una mujer increíble</h2>
 
 <p class="mensaje">
-Jessica, hoy celebramos la fuerza, la belleza y la inteligencia de las mujeres.
-Eres una persona especial que ilumina la vida de quienes te rodean.
-Que este día te recuerde lo valiosa, capaz y maravillosa que eres.
-</p>
-
-<img src="https://images.unsplash.com/photo-1526045478516-99145907023c">
-</div>
-
-<div class="card">
-
-<h2>🌷 Un mensaje para ti</h2>
-
-<p class="mensaje">
-Que nunca olvides lo fuerte que eres,  
-lo lejos que puedes llegar  
-y todo lo hermoso que puedes lograr.  
-
-El mundo necesita más mujeres como tú.  
+Jessica, hoy celebramos tu fuerza, tu belleza y todo lo maravilloso que eres.
+El mundo es mejor gracias a mujeres como tú.
+Nunca olvides lo especial que eres. 💜
 </p>
 
 <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946">
@@ -102,25 +149,54 @@ El mundo necesita más mujeres como tú.
 
 <div class="card">
 
-<h2>✨ Jessica</h2>
+<h2>💐 Un mensaje para ti</h2>
 
 <p class="mensaje">
-Hoy no solo celebramos el Día de la Mujer,  
-celebramos a una mujer única.
-
-Que tu sonrisa siga iluminando todo a tu alrededor.  
-Nunca dejes de creer en ti. 💜
+Que cada día recuerdes lo valiosa que eres.
+Que tus sueños se cumplan y que tu sonrisa siga iluminando a todos.
+Hoy celebramos a una mujer única: Jessica.
 </p>
 
 <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92">
 
 </div>
 
+<div class="card">
+
+<h2>✨ Jessica</h2>
+
+<p class="mensaje">
+Eres fuerte, valiente y especial.  
+Que este Día de la Mujer te recuerde lo increíble que eres  
+y lo lejos que puedes llegar.  
+
+💜 Nunca dejes de brillar 💜
+</p>
+
+<img src="https://images.unsplash.com/photo-1526045478516-99145907023c">
+
+</div>
+
 </div>
 
 <footer>
-💜 Con admiración para Jessica 💜
+🌸 Con cariño para Jessica 🌸
 </footer>
+
+<!-- CORAZONES -->
+<div class="corazon" style="left:10%">💜</div>
+<div class="corazon" style="left:25%; animation-delay:2s;">💗</div>
+<div class="corazon" style="left:40%; animation-delay:4s;">💖</div>
+<div class="corazon" style="left:55%; animation-delay:1s;">💜</div>
+<div class="corazon" style="left:70%; animation-delay:3s;">💗</div>
+<div class="corazon" style="left:85%; animation-delay:5s;">💖</div>
+
+<!-- FLORES -->
+<div class="flor" style="top:10%; left:5%">🌸</div>
+<div class="flor" style="top:30%; left:90%">🌼</div>
+<div class="flor" style="top:70%; left:10%">🌺</div>
+<div class="flor" style="top:80%; left:80%">🌷</div>
 
 </body>
 </html>
+```
